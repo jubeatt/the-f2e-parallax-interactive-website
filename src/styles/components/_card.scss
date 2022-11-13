@@ -1,0 +1,42 @@
+.f2e-card {
+  opacity: 0;
+  .f2e-card-header {
+    position: relative;
+    width: 230px;
+    height: 300px;
+    background-color: var(--color-blue);
+    border-radius: 10px;
+    background-image: url('../assets/images/wave.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    margin-bottom: 20px;
+    .f2e-card-header-decoration {
+      position: absolute;
+      top: 30px;
+      right: 10px;
+    }
+    .f2e-card-header-number {
+      position: absolute;
+      top: -70px;
+      left: -50px;
+      font-size: 96px;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--color-white);
+      &::selection {
+        background-color: var(--color-light-blue);
+      }
+    }
+  }
+  .f2e-card-body {
+    position: absolute;
+    display: flex;
+    font-size: 24px;
+    color: var(--color-white);
+    .f2e-card-body-text {
+      white-space: nowrap;
+    }
+  }
+}

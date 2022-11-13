@@ -1,0 +1,19 @@
+.f2e-eye-socket {
+  position: relative;
+  width: 4.375rem;
+  height: 5.625rem;
+  border: 0.75rem solid var(--color-gray);
+  border-radius: 50% / 50%;
+  .f2e-eye-ball {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%;
+    background-color: var(--color-light-gray);
+    transform-origin: 50%;
+    animation: blink 1s infinite;
+  }
+}

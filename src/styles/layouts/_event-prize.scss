@@ -1,0 +1,106 @@
+.f2e-event-prize-section {
+  background-image: url('../assets/images/bg1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 70px 0;
+  overflow: hidden;
+  position: relative;
+  .f2e-event-prize-mobile-only-fist {
+    display: none;
+    @include md {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.slide-in-blurred-tl {
+      animation: slide-in-blurred-tl 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+    }
+  }
+  .f2e-event-prize-container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 40px;
+    .f2e-event-prize-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 80px;
+      .f2e-event-prize-header-title {
+        margin: 0 20px;
+        font-size: 3rem;
+        text-align: center;
+        color: transparent;
+        line-height: 1.2;
+        -webkit-text-stroke: 1px var(--color-light-yellow);
+        strong {
+          font-size: 4rem;
+          &::selection {
+            background-color: var(--color-light-blue);
+          }
+        }
+        &::selection {
+          background-color: var(--color-light-blue);
+        }
+      }
+      .f2e-event-prize-header-fist {
+        @include md {
+          display: none;
+        }
+        svg {
+          width: 13.6875rem;
+        }
+        &.slide-in-blurred-right {
+          animation: slide-in-blurred-right 0.6s cubic-bezier(0.23, 1, 0.32, 1) both,
+            flicker2 2s linear infinite 0.6s;
+        }
+        &.slide-in-blurred-left {
+          animation: slide-in-blurred-left 0.6s cubic-bezier(0.23, 1, 0.32, 1) both,
+            flicker2 2s linear infinite 1.2s;
+        }
+        &.f2e-event-prize-header-fist-right {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    .f2e-event-prize-body {
+      padding: 40px 30px;
+      border-radius: 20px;
+      border: 3px solid var(--color-light-pink);
+      box-shadow: 0 0 10px var(--color-light-pink);
+      font-size: 1.5rem;
+      color: var(--color-white);
+      margin-bottom: 80px;
+      @include md {
+        font-size: 1.8rem;
+      }
+      .f2e-event-prize-body-title {
+        margin-bottom: 20px;
+      }
+      .f2e-event-prize-body-description + .f2e-event-prize-body-description {
+        margin-top: 10px;
+      }
+    }
+    .f2e-event-prize-stage-wrapper {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      @include sm {
+        display: none;
+      }
+      .f2e-event-prize-stage {
+        position: relative;
+        z-index: 20;
+      }
+      .f2e-event-prize-stage-ribbon {
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+      }
+    }
+  }
+}

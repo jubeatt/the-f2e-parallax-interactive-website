@@ -1,0 +1,194 @@
+.f2e-event-info-section {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  .f2e-event-info-container {
+    position: relative;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 40px;
+    .f2e-event-info-header {
+      margin-bottom: 80px;
+      .f2e-event-info-header-title {
+        text-align: center;
+        font-size: 3rem;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--color-light-yellow);
+        @include lg {
+          font-size: 3.5rem;
+        }
+        &::selection {
+          background-color: var(--color-light-blue);
+        }
+      }
+    }
+    .f2e-event-info-body {
+      display: grid;
+      // total: 12 columns
+      grid-template-columns: repeat(12, 1fr);
+      .f2e-event-info-body-card-wrapper {
+        // each one takes 4 columns (pc)
+        grid-column: span 4;
+        @include lg {
+          // each one takes 12 columns (mobile)
+          grid-column: span 12;
+          display: flex;
+        }
+        &:first-child {
+          .f2e-event-info-body-card-timeline-bar {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            @include lg {
+              border-bottom-left-radius: unset;
+              border-top-right-radius: 10px;
+            }
+          }
+        }
+        &:last-child {
+          .f2e-event-info-body-card-timeline-bar {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            @include lg {
+              border-top-right-radius: unset;
+              border-bottom-left-radius: 10px;
+            }
+          }
+        }
+        .f2e-event-info-body-card-timeline-bar {
+          width: 100%;
+          height: 8px;
+          background-color: var(--color-light-pink);
+          box-shadow: 0 0 10px var(--color-light-pink);
+          position: relative;
+          @include lg {
+            width: 8px;
+            height: 100%;
+          }
+          .f2e-event-info-body-card-timeline-bar-triangle {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 47%;
+            border-radius: 10%;
+            transform: translate(-50%, -50%) rotate(120deg) skewY(30deg) scaleX(0.866);
+            @include lg {
+              top: 33%;
+            }
+            &::before,
+            &::after {
+              width: 60px;
+              height: 60px;
+              position: absolute;
+              background: var(--color-light-pink);
+              pointer-events: auto;
+              content: '';
+            }
+            &::before {
+              border-radius: 10% 10% 10% 43%;
+              transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(30deg)
+                scaleY(0.866) translateX(-24%);
+            }
+            &::after {
+              border-radius: 10% 10% 43% 10%;
+              transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(-30deg)
+                scaleY(0.866) translateX(24%);
+            }
+          }
+        }
+        .f2e-event-info-body-card {
+          padding: 80px 40px;
+          text-align: center;
+          color: var(--color-white);
+          @include lg {
+            flex: 1;
+          }
+          .f2e-event-info-body-card-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            @include lg {
+              font-size: 3rem;
+            }
+          }
+          .f2e-event-info-body-card-description {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            @include lg {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .f2e-event-info-stick-wrapper {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    .f2e-event-info-stick {
+      width: 6px;
+      height: 200px;
+      transform: rotate(90deg);
+      border-radius: 10px;
+      background-color: var(--color-light-green);
+      box-shadow: 0 0 30px var(--color-light-green);
+      animation: flicker2 1.4s linear infinite;
+    }
+  }
+
+  .f2e-event-info-stick {
+    width: 6px;
+    height: 180px;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    &.f2e-event-info-stick-blue {
+      background-color: var(--color-light-green);
+      box-shadow: 0 0 30px var(--color-light-green);
+    }
+    &.f2e-event-info-stick-pink {
+      background-color: var(--color-light-pink);
+      box-shadow: 0 0 30px var(--color-light-pink);
+    }
+    &.f2e-event-info-stick-yellow {
+      background-color: var(--color-light-yellow);
+      box-shadow: 0 0 30px var(--color-light-yellow);
+    }
+  }
+  .f2e-event-info-stick-1 {
+    position: absolute;
+    top: -65px;
+    left: 0;
+    animation: flicker2 1.4s linear infinite;
+  }
+  .f2e-event-info-stick-2 {
+    position: absolute;
+    top: -75px;
+    left: 95px;
+    animation: flicker2 2s linear infinite;
+  }
+  .f2e-event-info-stick-3 {
+    position: absolute;
+    top: 75px;
+    left: -8px;
+    animation: flicker2 1.8s linear infinite;
+  }
+  .f2e-event-info-stick-4 {
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+    animation: flicker2 1.4s linear infinite;
+  }
+  .f2e-event-info-stick-5 {
+    position: absolute;
+    bottom: 70px;
+    right: 10px;
+    animation: flicker2 2s linear infinite;
+  }
+  .f2e-event-info-stick-6 {
+    position: absolute;
+    bottom: -90px;
+    right: 105px;
+    animation: flicker2 1.8s linear infinite;
+  }
+}

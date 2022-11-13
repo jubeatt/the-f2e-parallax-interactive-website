@@ -1,0 +1,66 @@
+.f2e-swiper-header {
+  .f2e-swiper-header-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-white);
+    &::selection {
+      background-color: var(--color-light-blue);
+    }
+  }
+}
+
+.f2e-swiper-wrapper {
+  overflow: hidden;
+  padding-top: 140px;
+  padding-bottom: 20px;
+
+  .swiper {
+    width: 100%;
+    height: 300px;
+    color: white;
+    overflow: visible;
+    .swiper-slide {
+      transition: all 0.5s;
+    }
+    .swiper-slide-active {
+      animation: bounce-in-top 1.1s both;
+      .f2e-prize-card {
+        .f2e-prize-card-title {
+          .f2e-prize-card-title-medal {
+            svg {
+              width: 60px;
+              path {
+                fill: var(--color-light-yellow);
+              }
+            }
+          }
+          .f2e-prize-card-title-text {
+            color: var(--color-light-yellow);
+          }
+        }
+        .f2e-prize-card-content {
+          .f2e-prize-card-content-description {
+            display: block;
+          }
+        }
+      }
+    }
+    .f2e-slide-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 99;
+      cursor: pointer;
+      @include sm {
+        display: none;
+      }
+      &.f2e-slide-prev-button {
+        left: 0;
+      }
+      &.f2e-slide-next-button {
+        right: 0;
+      }
+    }
+  }
+}

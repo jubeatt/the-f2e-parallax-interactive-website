@@ -1,0 +1,53 @@
+.f2e-prize-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .f2e-prize-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    .f2e-prize-card-title-medal {
+      svg {
+        width: 38px;
+        path {
+          fill: var(--color-deep-gray);
+        }
+      }
+    }
+    .f2e-prize-card-title-text {
+      font-size: 2rem;
+      margin-right: 10px;
+    }
+  }
+  .f2e-prize-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .f2e-prize-card-content-image {
+      flex-shrink: 1;
+      margin-right: 10px;
+      max-width: 100%;
+      min-width: 0;
+    }
+    .f2e-prize-card-content-description {
+      display: none;
+      flex-shrink: 0;
+      text-align: center;
+      // flex-wrap: wrap;
+      p {
+        font-size: 2rem;
+        .f2e-prize-card-content-number {
+          display: inline-block;
+          margin: 0 8px;
+        }
+      }
+      small {
+        font-size: 1.25rem;
+        color: var(--color-deep-gray);
+      }
+    }
+  }
+}

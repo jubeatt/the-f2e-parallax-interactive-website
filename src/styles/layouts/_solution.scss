@@ -1,0 +1,67 @@
+.f2e-solution-section {
+  background-image: url('../assets//images/bg1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 70px 0;
+  .f2e-solution-container {
+    position: relative;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 20px;
+    .f2e-board + .f2e-board {
+      margin-top: 30px;
+    }
+    .f2e-bubble {
+      position: absolute;
+      &.f2e-bubble-1 {
+        top: 604px;
+        left: 16px;
+        @include lg {
+          top: auto;
+          bottom: -40px;
+        }
+        animation: float 3s ease-in-out infinite;
+        svg {
+          animation: pulsate-bck 4s ease-in-out infinite both;
+        }
+      }
+      &.f2e-bubble-2 {
+        animation: float 2s ease-in-out infinite;
+        top: 620px;
+        left: 45px;
+        @include lg {
+          top: auto;
+          bottom: -46px;
+        }
+        svg {
+          animation: pulsate-bck 3s ease-in-out infinite both;
+        }
+      }
+      &.f2e-bubble-3 {
+        top: 159px;
+        right: 85px;
+        animation: float 3s ease-in-out infinite;
+        @include lg {
+          top: 35px;
+        }
+        svg {
+          animation: pulsate-bck 4s ease-in-out infinite both;
+        }
+      }
+      &.f2e-bubble-4 {
+        top: 28px;
+        right: 28px;
+        animation: float 2s ease-in-out infinite;
+        @include lg {
+          top: -68px;
+          right: 0px;
+        }
+        svg {
+          animation: pulsate-bck 3s ease-in-out infinite both;
+        }
+      }
+    }
+  }
+}
