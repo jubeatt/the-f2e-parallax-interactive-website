@@ -18,14 +18,14 @@ export default function EventPrize() {
       imgSrc: paper
     },
     {
-      title: '團體企業獎',
+      title: '個人企業獎',
       prize: 'NTD 3,000/位',
       quota: '（共六位）',
       imgSrc: moneyBag,
       data: { prizeValue: 3000 }
     },
     {
-      title: '個人企業獎',
+      title: '團體企業獎',
       prize: 'NTD 10,000/組',
       quota: '（共三組）',
       imgSrc: money,
