@@ -104,12 +104,13 @@ export default function EventPrize() {
             loop={true}
             centeredSlides={true}
             onSlideChange={(swiper) => {
+              console.log(swiper.realIndex)
               if (list[swiper.realIndex].data) {
                 const originalList = JSON.parse(JSON.stringify(list))
                 const newList = JSON.parse(JSON.stringify(list))
                 newList[swiper.realIndex].data.prizeValue = 0
                 setList(newList)
-                setTimeout(() => setList(originalList), 0)
+                setTimeout(() => setList(originalList), 100)
               }
             }}
             spaceBetween={120}

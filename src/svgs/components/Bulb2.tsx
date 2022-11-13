@@ -31,7 +31,7 @@ export default function Bulb2() {
           filterUnits='userSpaceOnUse'
           colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
           <feGaussianBlur stdDeviation='5' result='effect1_foregroundBlur_47_227' />
         </filter>
@@ -44,7 +44,7 @@ export default function Bulb2() {
           filterUnits='userSpaceOnUse'
           colorInterpolationFilters='sRGB'
         >
-          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
           <feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
           <feGaussianBlur stdDeviation='5' result='effect1_foregroundBlur_47_227' />
         </filter>
