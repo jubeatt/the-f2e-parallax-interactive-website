@@ -1,12 +1,14 @@
 {
   "name": "the-f2e-parallax-interactive-website",
+  "homepage": "https://github.com/jubeatt/the-f2e-parallax-interactive-website.git",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "animated-number-react": "^0.1.2",
@@ -23,6 +25,7 @@
     "@vitejs/plugin-react": "^2.2.0",
     "eslint": "^8.27.0",
     "eslint-config-react-app": "^7.0.1",
+    "gh-pages": "^4.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }
