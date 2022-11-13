@@ -58,7 +58,7 @@
         }
         &.slide-in-blurred-left {
           animation: slide-in-blurred-left 0.6s cubic-bezier(0.23, 1, 0.32, 1) both,
-            flicker2 2s linear infinite 1.2s;
+            flicker2 2s linear infinite 0.6s;
         }
         &.f2e-event-prize-header-fist-right {
           svg {
