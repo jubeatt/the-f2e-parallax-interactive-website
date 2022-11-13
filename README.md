@@ -13,7 +13,7 @@
 
 ![demo](./demo.gif)
 
-Demo url： https://github.com/jubeatt/the-f2e-parallax-interactive-website/
+Demo url： https://jubeatt.github.io/the-f2e-parallax-interactive-website/
 
 ## 使用技術
 
