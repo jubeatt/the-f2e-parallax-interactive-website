@@ -106,10 +106,12 @@ export default function Question() {
     // eye animation
     const container = document.getElementById('f2e-container')
     container?.addEventListener('mousemove', onMousemove)
+    container?.addEventListener('touchmove', onTouchmove)
 
     return () => {
       ctx.revert()
       container?.removeEventListener('mousemove', onMousemove)
+      container?.removeEventListener('touchmove', onTouchmove)
     }
   }, [])
 
@@ -172,8 +174,20 @@ export default function Question() {
     eyes.forEach((eye: HTMLElement) => {
       const x = (event.clientX * 100) / window.innerWidth
       const y = (event.clientY * 100) / window.innerWidth
-      const left = x > 70 ? x - (x % 70) : x // max: 70
-      const top = y > 70 ? y - (y % 70) : y // max: 70
+      const left = x > 70 ? 70 : x // max: 70
+      const top = y > 70 ? 70 : y // max: 70
+      eye.style.left = left + '%'
+      eye.style.top = top + '%'
+    })
+  }
+
+  function onTouchmove(event: TouchEvent) {
+    const eyes = document.querySelectorAll('.f2e-eye-ball') as NodeListOf<HTMLElement>
+    eyes.forEach((eye: HTMLElement) => {
+      const x = (event.changedTouches[0].clientX * 100) / window.innerWidth
+      const y = (event.changedTouches[0].clientY * 100) / window.innerWidth
+      const left = x > 70 ? 70 : x // max: 70
+      const top = y > 70 ? 70 : y // max: 70
       eye.style.left = left + '%'
       eye.style.top = top + '%'
     })
